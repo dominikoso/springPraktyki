@@ -1,0 +1,17 @@
+# application.yml
+
+spring:
+  mail:
+    default-encoding: UTF-8
+    host:
+    username:
+    password:
+    port:
+    properties:
+      mail:
+        smtp:
+          auth: false
+          starttls:
+            enable: false
+    protocol: smtp
+    test-connection: false

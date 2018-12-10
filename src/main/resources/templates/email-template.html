@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"></meta>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></meta>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"></link>
+
+    <title>Fetching Book By Category</title>
+</head>
+<body>
+
+<div class="container" style="margin: auto; width: 80% !important;">
+    <h1 class="m-4 text-center">Welcome!<br></br> Category ID=<span th:text="${catId}"></span></h1>
+
+    <table class="table" style="text-align: center;">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">AUTHOR</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="count : ${counts}">
+            <td th:text="${count.id}"></td>
+            <td th:text="${count.name}"></td>
+            <td th:text="${count.author}"></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="pt-2" style="border-top: 1px gray solid">Please do not reply this email, this message was generated automaticaly. SCI@2018</div>
+</div>
+
+
+</body>
+</html>
